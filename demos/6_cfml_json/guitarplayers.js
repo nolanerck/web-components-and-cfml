@@ -10,7 +10,7 @@ class GuitarPlayers extends HTMLElement
   async findRockStarsAPI()
   {
     // let res = await fetch( "/api/legacy.cfm" );
-    
+    // let res = await fetch( "/api/Musicians.cfc?method=getGuitarists&returnformat=json" );
 
     let rockstars = await res.json();
 

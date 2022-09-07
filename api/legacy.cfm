@@ -13,5 +13,4 @@
 <cfsetting enablecfoutputonly="true">
 
 <cfcontent type="application/json" reset="true">
-
 <cfoutput>#serializeJson( rockstars )#</cfoutput>
