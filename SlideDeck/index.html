@@ -55,11 +55,7 @@
 				<section>
 					<h2>About Me</h2>
 					<ul>
-						<li>Software Consultant (southofshasta.com)
-							<ul>
-								<li>Software Development, Training, Design</li>
-							</ul>
-						</li>
+						<li>Owner / Director, South of Shasta</li>
 						<li>VP of Engineering, e-MissionControl</li>
 						<li>Manager, Sac Interactive Tech Meetup</li>
 						<li>Reformed Video Game Developer - Grim Fandango, SimPark, StarWars Rogue Squadron, etc...</li>
@@ -89,225 +85,209 @@
 					</ul>
 				</section>
 
-				<!-- <section>
+				<section>
 					<h2>Today's Agenda</h2>
 					<ul>
-						<li>What are Design Patterns?</li>
-						<li>Why do I want to use them?</li>
-						<li>Some common design patterns</li>
-						<li>Examples of when to use design patterns</li>
+						<li>What are Web Components?</li>
+						<li>Some basic examples and concepts</li>
+						<li>Web Components with CFML</li>
 						<li>Tips</li>
 						<li>Other resources</li>
 					</ul>
-				</section> -->
+				</section>
 
 				<section>
-					<h2>What Is A Design Pattern?</h2>
+					<h2>What is a Web Component?</h2>
 					<ul>
-						<li>A "design pattern"
-							<ul>
-								<li>$6 phrase for "a way to organize your classes so they work together in a flexible way".</li>
-								<li>Like a for() loop, if(), array[]</li>
-								<li>Reusable technique, based around objects.</li>
-							</ul>
+						<li>JavaScript based building block</li>
+						<li>Write your own HTML tags!</li>
+						<li>Kind of like CFML Custom Tags</li>
+						<li>but processed in the browser, not server side</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Web Components</h2>
+					<ul>
+						<li>Not framework specific</li>
+						<li>Built on vanilla JavaScript</li>
+						<li>Can also use them w/ <em>all</em> the SPA frameworks</li>
+						<li>And they work in CFML too!</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Web Components</h2>
+					<ul>
+						<li>Require knowing a little OOP</li>
+						<li>Based on JavaScript classes</li>
+						<li>Doesn't require Node, TypeScript, 3rd party libaries, etc.</li>
+						<li>Vanilla JavaScript</li>
+						<li>Can connect to <em>any</em> server (CFML, Java, PHP, Perl, whatever sends JSON)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Your First Web Component</h2>
+					<ul>
+						<li>[1 - Hello World Demo]</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Your First Web Component</h2>
+					<ul>
+						<li>Naming convention: hello-world</li>
+						<li>The hyphen is <em>required</em></li>
+						<li>Prevents naming collision issues with future HTML tags</li>
+						<li>Pick a project or module prefix for your code</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Your First Web Component (JavaScript)</h2>
+					<ul>
+						<li>Class must extend HTMLElement</li>
+						<li>connectedCallback() - code that runs when your Element is added to the DOM</li>
+						<li>customElements.define(...) - registers the Element with the CustomElementRegistry</li>
+						<li>...Essentially makes it visible/usable to the outside world</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Attributes</h2>
+					<ul>
+						<li>&lt;hello-world firstname="Nolan"&gt;&lt;/hello-world&gt;</li>
+						<li>Element must have a constructor that calls super()</li>
+						<li>observedAttributes() - list of attributes to watch</li>
+						<li>attributeChangedCallback() - what to do with an observed attribute</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Attributes</h2>
+					<ul>
+						<li>[2 - Attributes Demo]</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Multiple Attributes</h2>
+					<ul>
+						<li>[3 - Multiple Attributes Demo]</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>What Went Wrong?</h2>
+					<ul>
+						<li>Cant add HTML tags via this.textContent, just plain text basically</li>
+						<li>Need better functionality for this to be really usable</li>
+						<li>Want to put our CSS inside the Component so everything is organized, and
+							safe from outside interference via other code.
 						</li>
-
-						<li>There are lots of design patterns:
-							<ul>
-								<li>Singleton, Factory, Template Method, Model-View-Controller, Observer,
-									Dependency Injection, Facade, Finite State Machine, 
-								</li>
-								<li class="fragment">and several more!</li>
-								<li class="fragment">that you might NEVER use!</li>
-								<li class="fragment">...or that you might use all the time</li>
-							</ul>
-						</li>
+						<li>Enter ShadowDOM</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>What Is A Design Pattern?</h2>
+					<h2>Shadow DOM</h2>
 					<ul>
-						<li>Not platform specific.</li>
-						<li>Available for ColdFusion, Java, .NET, JavaScript, etc.</li>
-						<li>Most OOP langauges can do some variation of these.</li>
-						<li>Naming conventions and overall design is similar everywhere.</li>
+						<li>Solves our encapsulation problem</li>
+						<li>Attaches a separated DOM to the Web Component</li>
+						<li>this.attachShadow({ mode: 'closed' });</li>
+						<li>Mode can be open or closed</li>
+						<li>Open: Outside JS can access our Element's Shadow DOM</li>
+						<li>Closed: Shadow DOM can only be accessed via our Element</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>Using Design Patterns</h2>
+					<h2>Shadow DOM</h2>
 					<ul>
-						<li>Doesn't require an MVC framework</li>
-						<li>Doesn't always mean rewriting the entire codebase<br>(MVC is the exception)</li>
-						<li>Don't have to use 1, some, or all the Design Patterns</li>
+						<li>[4 Shadow DOM Demo]</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>They're not scary, I promise</h2>
+					<h2>Now for the CFML!</h2>
 				</section>
 
 				<section>
-					<h2>Let's look at some patterns!</h2>
-				</section>
-
-				<section>
-					<h2>Singleton</h2>
+					<h2>Web Components + CFML</h2>
 					<ul>
-						<li>Ensures that 1 and only 1 copy of a CFC gets created.</li>
-						<li>And that 1 copy is used by the <em>entire</em> application.</li>
-						<li>[Singleton Demo]</li>
+						<li>Can mix and match</li>
+						<li>Ala jQuery or Custom Tags</li>
+						<li>Neither required rewriting your entire CFML codebase</li>
+						<li>Drop them in as needed</li>
+						<li>Self contained modules</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>Strategy Pattern</h2>
+					<h2>Web Components + CFML</h2>
 					<ul>
-						<li>For when you have classes that KIND OF behave the same way, but
-							not <em>exactly</em> enough for Inheritance to be useful.
-						</li>
-						<li>(Also a great intro to Interfaces)</li>
-						<li>Ducks are a great example!</li>
+						<li>[5 CFML Vars Demo]</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>Strategy Pattern and Ducks!</h2>
+					<h2>CFML + APIs or JSON</h2>
 					<ul>
-						<li>Ducks can fly, swim, quack, and eat</li>
-						<li class="fragment">ALL ducks?</li>
-						<li class="fragment">Rubber duck toys?</li>
-						<li class="fragment">Wooden decoy ducks?</li>
-						<li class="fragment">[Strategy Demo]</li>
+						<li>JavaScript doesn't care what's on the other side of a URL</li>
+						<li>CFML, PHP, COBOL, Perl, whatever</li>
+						<li>If the server spits out JSON, your JavaScript can read it</li>
+						<li>Can even mix and patch (run PHP <em>and</em> COBOL)</li>
+						<li>All the browser cares about is the JSON output</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>Strategy Pattern</h2>
+					<h2>Getting JSON back from CFML</h2>
 					<ul>
-						<li>Real world uses:</li>
-						<li>Payroll system: Full time employees, contractors, interns</li>
-						<li>Do they all get paid the same way?</li>
-						<li>Video games: things that fly...birds, insects, space ships</li>
-						<li>Do they all fly the same way?</li>
+						<li>Several ways to do it</li>
+						<li>ColdBox REST API template</li>
+						<li>ColdBox, return JSON instead of a /view file</li>
+						<li>Framework-1 will return JSON</li>
+						<li>Taffy.io</li>
+						<li>Write a little code for older legacy apps</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>Factory Pattern</h2>
+					<h2>Getting JSON back from CFML</h2>
+
 					<ul>
-						<li>Used for creating different variations of the same Object</li>
-						<li>You don't do createObject() or new() directly</li>
-						<li>Ask the Factory to create an object <em>for</em> you</li>
-						<li>Requires only 1 CFC!</li>
-						<li>[Factory 1 Demo]</li>
-						<li>[Factory 2 Demo]</li>
+						<li>[6 CFML + JSON Demo]</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>Adapter Pattern</h2>
-					<ul>
-						<li>Makes 2 (or more) CFCs that are different all run in the same way</li>
-						<li>You write 1 Adapter CFC to connect the components</li>
-						<li>Similar to "adapters" in the real world -- 3-prong adapter for a 2-prong power outlet, etc</li>
-						<li>[Adapter Demo]</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Adapter Pattern</h2>
-					<ul>
-						<li>Real world use: swapping vendor libaries/APIs</li>
-						<li>Don't want to rebuild your entire app when switching vendors</li>
-						<li>Use an Adapter! Leave your app code as-is, just adapt the vendor methods so they work the same way</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Decorator Pattern</h2>
+					<h2>Getting JSON back from CFML</h2>
 
 					<ul>
-						<li>Adds new behavior to a CFC</li>
-						<li>Replacemnet for tangled inheritance trees</li>
-						<li>Happens at run-time</li>
-						<li>Instead of inheriting the new functionality, the component is <em>decorated</em> with it</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Decorator Pattern</h2>
-
-					<ul>
-						<li>Building an espresso machine</li>
-						<li>4 types of coffee: House Blend, Dark Roast, Espresso, Decaf</li>
-						<li>Whip cream and/or hazelnut on all 4</li>
-					</ul>
-				</section>
-
-				<section>
-					<img src="images/1_4-coffees.png" />
-				</section>
-
-				<section>
-					<img src="images/2_8-coffees-whip-cream.png" />
-				</section>
-
-				<section>
-					<img src="images/3_16coffees.png" />
-				</section>
-
-				<section>
-					<h2>Decorator Pattern</h2>
-					<ul>
-						<li>[Decorator Demo]</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Decorator Pattern</h2>
-					<ul>
-						<li>Real world uses: any time you have a bunch of options, each with its own business logic</li>
-						<li>Adding logging, security, polling, and 2FA to a piece of functionality in your app</li>
-						<li>...then later adding a feature flag requirement</li>
-						<li>...write 1 FeatureFlag CFC, and decorate your app as needed.</li>
+						<li>[7 CFML + JSON Demo via cfhttp]</li>
 					</ul>
 				</section>
 
 				<section>
 					<h2>Some Useful Tips</h2>
 					<ul>
-						<li>Don't feel like you have to jump in head first</li>
-						<li>Treat it like a tool in a tool box</li>
-						<li>Use obvious/standard naming conventions:
-							<br>SQLFactory, CustomerDecorator, etc
-						</li>
-						<li>Dependency Injection is also very worth learning<br>(it's not scary, I promise)</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Recap</h2>
-					<ul>
-						<li>Design patterns...good!</li>
-						<li>Only needed a couple CFCs for each.</li>
-						<li>Able to combine patterns together for even more code reuse!</li>
-						<li>Did not require any 3rd party libaries.</li>
-						<li>But does take a little discipline and getting used to.</li>
+						<li>Attributes are <em>lowercase</em> or they break!</li>
+						<li>Stick to a standard prefix for your naming convention (the hyphen is req'd so use it to your advantage)</li>
+						<li>Plan and organize first</li>
+						<li>Form elements can be tricky. Use FormData Interface or ElementInternals or a Shim (YMMV)</li>
 					</ul>
 				</section>
 
 				<section>
 					<h2>Other Resources</h2>
 					<ul>
-						<li>"Modern ColdFusion (CFML) in 100 Minutes" - Luis Majano</li>
-						<li>"Object-Oriented Programming in ColdFusion" - Matt Gifford</li>
-						<li>"Head First Design Patterns" - Eric Freeman & Elisabeth Robson</li>
-						<li>"Design Patterns: Elements Of Reusable Object-Oriented Software" (Gang of Four)</li>
-						<li>South of Shasta training classes</li>
-						<li>CFCasts.com video series</li>
-						<li>southofshasta.com/presentations</li>
+						<li>Lit Framework</li>
+						<li>Web Components in Space on YouTube (Ben Farrell)</li>
+						<li>custom-elements-everywhere.com</li>
+						<li>webcomponents.org</li>
+						<li>Tons of libaries on GitHub</li>
 					</ul>
 				</section>
 
@@ -316,7 +296,7 @@
 				</section>
 
 				<section>
-					<h2>Questions? Comments?<br />Need consulting help?</h2>
+					<h2>Questions? Comments?</h2>
 					<ul>
 						<li>southofshasta.com</li>
 						<li>nolan@southofshasta.com</li>
