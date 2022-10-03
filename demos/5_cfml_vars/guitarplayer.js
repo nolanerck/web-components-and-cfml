@@ -5,12 +5,13 @@ class GuitarPlayer extends HTMLElement
     super();
     this.name = '[name]';
     this.band = '[band]';
+    this.photo = '';
   }
 
   // "official" list of the attributes our component cares about
   static get observedAttributes() 
   {
-    return ['name','band'];
+    return ['name','band', 'photo'];
   }
   
   // when an observed attribute is set or changes
@@ -44,6 +45,9 @@ class GuitarPlayer extends HTMLElement
       <div>
         <div class="name">Name: ${ this.name }</div>
         <div class="band">Band: ${ this.band }</div>
+        <div class="photo">Pic: 
+          <img height="300" width="500" src="imgs/${ this.photo }" alt="${ this.name }" />
+        </div>
       </div>
     `;
   }
