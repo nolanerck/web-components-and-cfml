@@ -10,7 +10,10 @@ class GuitarPlayers extends HTMLElement
   async findRockStarsAPI()
   {
     // let res = await fetch( "/api/legacy.cfm" );
-    // let res = await fetch( "/api/Musicians.cfc?method=getGuitarists&returnformat=json" );
+    let res = await fetch( "/api/Musicians.cfc?method=getGuitarists&returnformat=json" );
+    // your framework-1 URL goes here
+    // or your ColdBox REST API
+    // or your whatever other URL that returns JSON
 
     let rockstars = await res.json();
 

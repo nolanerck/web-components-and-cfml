@@ -102,7 +102,7 @@
 						<li>JavaScript based building block</li>
 						<li>Write your own HTML tags!</li>
 						<li>Kind of like CFML Custom Tags</li>
-						<li>but processed in the browser, not server side</li>
+						<li>Processed in the browser, not server side</li>
 					</ul>
 				</section>
 
@@ -151,6 +151,67 @@
 						<li>connectedCallback() - code that runs when your Element is added to the DOM</li>
 						<li>customElements.define(...) - registers the Element with the CustomElementRegistry</li>
 						<li>...Essentially makes it visible/usable to the outside world</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Lifecycle Methods</h2>
+					<ul>
+						<li>constructor()</li>
+						<li>observedAttributes()</li>
+						<li>attributeChangedCallback()</li>
+						<li>connectedCallback()</li>
+						<li>disconnectedCallback()</li>
+						<li>adoptedCallback()</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Lifecycle Methods</h2>
+					<ul>
+						<li>constructor()</li>
+						<li>Not <em>technically</em> required</li>
+						<li>But OOP best practice</li>
+						<li>Same as init() in CFC</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Lifecycle Methods</h2>
+					<ul>
+						<li>connectedCallback()</li>
+						<li>Required for your Component to start doing things</li>
+						<li>Runs when component is attached to the DOM</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Lifecycle Methods</h2>
+					<ul>
+						<li>observedAttributes()</li>
+						<li>List of the attributes we care about</li>
+						<li>attributeChangedCallback()</li>
+						<li>So we know which ones should/shouldn't trigger code to run in the component</li>
+						<li>Optional (unless you have attributes)</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Lifecycle Methods</h2>
+					<ul>
+						<li>disconnectedCallback()</li>
+						<li>Runs when component is disconnected from the DOM</li>
+						<li>Optional</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>adoptedCallback()</h2>
+					<ul>
+						<li>Called when a Web Component is moved from one document to another</li>
+						<li>I have no idea when this would be useful</li>
+						<li>IFrames?</li>
+						<li>Coffee if you can tell me a legit use case for it</li>
 					</ul>
 				</section>
 
@@ -256,7 +317,6 @@
 
 				<section>
 					<h2>Getting JSON back from CFML</h2>
-
 					<ul>
 						<li>[6 CFML + JSON Demo]</li>
 					</ul>
@@ -264,9 +324,31 @@
 
 				<section>
 					<h2>Getting JSON back from CFML</h2>
-
 					<ul>
 						<li>[7 CFML + JSON Demo via cfhttp]</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Migration Uses</h2>
+					<ul>
+						<li>Can use Web Components instead of full blown SPA frameworks</li>
+						<li>Or as a migration plan for porting legacy apps to SPAs</li>
+						<li>Move your business logic to Components</li>
+						<li>They're compatible with all the frameworks</li>
+						<li>And <em>also</em> work in .CFM files</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Recap</h2>
+					<ul>
+						<li>Very little syntax to Web Compoents</li>
+						<li>A handful of lifecycle methods</li>
+						<li>A little machinery/boilerplate</li>
+						<li>Everything else is up to how fancy you want to get with JavaScript</li>
+						<li>Can integrate any other JS libs you want to use</li>
+						<li>(Depends how well that lib is written, YMMV)</li>
 					</ul>
 				</section>
 

@@ -34,7 +34,7 @@ class HelloWorld extends HTMLElement
             color: green;
         }
       </style>
-      <div>Hello, ${ this.firstname } ${ this.lastname }, and welcome to Into The Box!</div>
+      <div>Hello, ${ this.firstname } ${ this.lastname }, and welcome to CF Summit 2022!</div>
     `;
   }
   
