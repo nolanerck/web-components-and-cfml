@@ -23,30 +23,45 @@ class GuitarPlayer extends HTMLElement
   
   connectedCallback() 
   {
-    // this.textContent = `<div>Hello, ${ this.firstname } ${ this.lastname }, and welcome to Into The Box!</div>`;
-
     const shadow = this.attachShadow( { mode: 'closed' } );
 
     shadow.innerHTML = `
       <style>
         :host
         {
-            font: Courier;
-            font-size: 2.2em;
-            color: green;
+            color: black;
         }
 
-        .name
+        .wrapper
         {
-          color: black;
+          border: 2px dashed black;
+          width: 30%;
+          padding: 5px;
+          margin-bottom: 10px;
+        }
+
+        .name, .band
+        {
+          font-family: Courier;
+          font-size: 24px;
+        }
+
+        .name:hover
+        {
+          color: green;
+        }
+
+        .photo img:hover
+        {
+          border: 4px dashed red;
         }
       </style>
 
-      <div>
-        <div class="name">Name: ${ this.name }</div>
-        <div class="band">Band: ${ this.band }</div>
-        <div class="photo">Pic: 
-          <img height="300" width="500" src="imgs/${ this.photo }" alt="${ this.name }" />
+      <div class="wrapper">
+        <span class="name">Name: ${ this.name }</span>&nbsp;&nbsp;&nbsp;
+        <span class="band">Band: ${ this.band }</span>
+        <div class="photo"> 
+          <img height="150" width="250" src="imgs/${ this.photo }" alt="${ this.name }" />
         </div>
       </div>
     `;
