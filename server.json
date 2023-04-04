@@ -1,5 +1,6 @@
 {
     "app":{
-        "cfengine":"Adobe"
-    }
+        "cfengine":"Adobe@2021.0.5"
+    },
+    "openbrowser":"false"
 }

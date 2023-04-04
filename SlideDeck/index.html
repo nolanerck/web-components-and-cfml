@@ -78,8 +78,12 @@
 				<section>
 					<h2>Prerequisites</h2>
 					<ul>
-						<li>Comfortable with modern JavaScript</li>
-						<li>(including basic OOP concepts)</li>
+						<li>Comfortable with modern JavaScript
+							<ul>
+								<li>(including basic OOP concepts)</li>
+							</ul>
+						</li>
+						<li>Familiar with the DOM</li>
 						<li>Experience using CF Custom Tags</li>
 						<li>APIs, JSON, Ajax, etc.</li>
 					</ul>
@@ -91,16 +95,16 @@
 						<li>What are Web Components?</li>
 						<li>Some basic examples and concepts</li>
 						<li>Web Components with CFML</li>
-						<li>Tips</li>
-						<li>Other resources</li>
+						<li>Tips and Other Goodies</li>
+						<li>More Resources</li>
 					</ul>
 				</section>
 
 				<section>
 					<h2>What is a Web Component?</h2>
 					<ul>
+						<li>Write your own HTML tags!</li>						
 						<li>JavaScript based building block</li>
-						<li>Write your own HTML tags!</li>
 						<li>Kind of like CFML Custom Tags</li>
 						<li>Processed in the browser, not server side</li>
 						<li>No libraries required = they're fast!</li>
@@ -113,6 +117,7 @@
 						<li>Not framework specific</li>
 						<li>Built on vanilla JavaScript</li>
 						<li>Can also use them w/ <em>all</em> the SPA frameworks</li>
+						<li>...or with <em>none</em> of the SPA frameworks!</li>
 						<li>And they work in CFML too!</li>
 					</ul>
 				</section>
@@ -122,10 +127,15 @@
 					<ul>
 						<li>Require knowing a little OOP</li>
 						<li>Based on JavaScript classes</li>
-						<li>Doesn't require Node, TypeScript, 3rd party libaries, etc.</li>
 						<li>Vanilla JavaScript</li>
+						<li>Doesn't require Node, TypeScript, 3rd party libaries, etc.</li>
 						<li>Can connect to <em>any</em> server (CFML, Java, PHP, Perl, whatever sends JSON)</li>
 					</ul>
+				</section>
+
+				<section>
+					<h2>Browser Support</h2>
+					<img src="./images/can-i-use.png" />
 				</section>
 
 				<section>
@@ -173,7 +183,7 @@
 						<li>constructor()</li>
 						<li>Not <em>technically</em> required</li>
 						<li>But OOP best practice</li>
-						<li>Same as init() in CFC</li>
+						<li>Same as init() in a CFC</li>
 					</ul>
 				</section>
 
@@ -189,30 +199,43 @@
 				<section>
 					<h2>Lifecycle Methods</h2>
 					<ul>
-						<li>observedAttributes()</li>
-						<li>List of the attributes we care about</li>
-						<li>attributeChangedCallback()</li>
-						<li>So we know which ones should/shouldn't trigger code to run in the component</li>
-						<li>Optional (unless you have attributes)</li>
+						<li>observedAttributes()
+							<ul>
+								<li>List of the attributes we care about</li>
+							</ul>
+						</li>
+						<li>attributeChangedCallback()
+							<ul>
+								<li>So we know which ones should/shouldn't trigger code to run in the component</li>
+								<li>Optional (unless you have attributes)</li>
+							</ul>
+						</li>
 					</ul>
 				</section>
 				
 				<section>
 					<h2>Lifecycle Methods</h2>
 					<ul>
-						<li>disconnectedCallback()</li>
-						<li>Runs when component is disconnected from the DOM</li>
-						<li>Optional</li>
+						<li>disconnectedCallback()
+							<ul>
+								<li>Runs when component is disconnected from the DOM</li>
+								<li>Optional</li>								
+							</ul>
+						</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>adoptedCallback()</h2>
+					<h2>Lifecycle Methods</h2>
 					<ul>
-						<li>Called when a Web Component is moved from one document to another</li>
-						<li>I have no idea when this would be useful</li>
-						<li>IFrames?</li>
-						<li>Coffee if you can tell me a legit use case for it</li>
+						<li>adoptedCallback()
+							<ul>
+								<li>Called when a Web Component is moved from one document to another</li>
+								<li>I have no idea when this would be useful</li>
+								<li>IFrames?</li>
+								<li>Coffee if you can tell me a legit use case for it</li>
+							</ul>
+						</li>
 					</ul>
 				</section>
 
@@ -258,7 +281,7 @@
 						<li>Solves our encapsulation problem</li>
 						<li>Attaches a separated DOM to the Web Component</li>
 						<li>this.attachShadow({ mode: 'closed' });</li>
-						<li>Mode can be open or closed</li>
+						<li>Mode can be "open" or "closed"</li>
 						<li>Open: Outside JS can access our Element's Shadow DOM</li>
 						<li>Closed: Shadow DOM can only be accessed via our Element</li>
 					</ul>
@@ -270,6 +293,19 @@
 						<li>[4 Shadow DOM Demo]</li>
 					</ul>
 				</section>
+
+				<!--- Slots --->
+
+				<section>
+					<h2>Slots</h2>
+					<ul>
+						<li>Content inside your Web Component</li>
+						<li>&lt;my-tag&gt;where does this render?&lt;/my-tag&gt;</li>
+						<li>[5 Slots Demo]</li>
+					</ul>
+				</section>
+
+				<!--- Form elememts / FormData -->
 
 				<section>
 					<h2>Now for the CFML!</h2>
@@ -294,12 +330,12 @@
 				</section>
 
 				<section>
-					<h2>CFML + APIs or JSON</h2>
+					<h2>CFML + APIs + JSON</h2>
 					<ul>
 						<li>JavaScript doesn't care what's on the other side of a URL</li>
 						<li>CFML, PHP, COBOL, Perl, whatever</li>
 						<li>If the server spits out JSON, your JavaScript can read it</li>
-						<li>Can even mix and patch (run PHP <em>and</em> COBOL)</li>
+						<li>Can even mix and match (run CFML <em>and</em> COBOL)</li>
 						<li>All the browser cares about is the JSON output</li>
 					</ul>
 				</section>
@@ -308,6 +344,7 @@
 					<h2>Getting JSON back from CFML</h2>
 					<ul>
 						<li>Several ways to do it</li>
+						<li>ColdFusion built-in API features</li>
 						<li>ColdBox REST API template</li>
 						<li>ColdBox, return JSON instead of a /view file</li>
 						<li>Framework-1 will return JSON</li>
@@ -368,11 +405,14 @@
 				<section>
 					<h2>Other Resources</h2>
 					<ul>
-						<li>Lit Framework</li>
 						<li>Web Components in Space on YouTube (Ben Farrell)</li>
 						<li>custom-elements-everywhere.com</li>
 						<li>webcomponents.org</li>
 						<li>Tons of libaries on GitHub</li>
+						<li>Raymond Camden's Blog</li>
+						<li>UnicornUtterances.com (Corbin Crutchley)</li>
+						<li>Lit Framework (lit.dev)</li>
+						<li>Stencil (Stenciljs.com)</li>						
 					</ul>
 				</section>
 
@@ -389,6 +429,10 @@
 						<li>Github: nolanerck</li>
 					</ul>
 					<p class="centered">Thanks!</p>
+				</section>
+
+				<section>
+					<img src="./images/feedback-survey.png" alt="QR Code for the Feedback Survey" />
 				</section>
 			</div>
 		</div>
@@ -409,3 +453,43 @@
 
 	</body>
 </html>
+
+
+<!-- * Does Bootstrap 5 support Web Components yet?
+* Stencil
+* Make a "please wait" button that when clicked draws some sort of "spiral" while it waits for the URL to return
+
+* Watch the video I did with Nic to pick up any more pointers from our talk w/ Corbin
+
+* Best way to do form elements with vanilla web Components? -->
+
+*Forms - FormData examples
+
+Tip - 
+use multiple JS files
+maybe 1 per each component, or 1 per "related items" and stick a few in the same JS
+yes this might mean a lot of JS files
+Can use a bundler like Webpack to squish them all into 1 smaller JS file
+-- better performance, faster loading
+
+Spinner Button.
+https://getbootstrap.com/docs/4.2/components/spinners/
+
+
+Progress Bar thingie
+
+
+this code in demo 6 (cfml /json)
+async connectedCallback() 
+{
+  let aryRockstars = await this.findRockStarsAPI();
+
+  const shadow = this.attachShadow( { mode: 'closed' } );    
+
+  ...if i add this tag mulitple times, it will make multiple HTTP requests for the SAME data.
+  I can probably save that into a class variable and just re-use it, cutting down the HTTP requests
+
+
+
+  Delete button with "are you sure?" automatically baked in before the button does something.
+

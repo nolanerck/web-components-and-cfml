@@ -2,7 +2,7 @@ class HelloWorld extends HTMLElement
 {
     connectedCallback() 
     {
-      this.textContent = 'Hello and welcome to CF Summut 2022!';
+      this.textContent = 'Hello and welcome!';
     }
   
 }
