@@ -160,7 +160,7 @@
 				</section>
 
 				<section>
-					<h2>Your First Web Component (JavaScript)</h2>
+					<h2>The JavaScript Stuff...</h2>
 					<ul>
 						<li>Class must extend HTMLElement</li>
 						<li>connectedCallback() - code that runs when your Element is added to the DOM</li>
@@ -182,9 +182,8 @@
 				</section>
 
 				<section>
-					<h2>Lifecycle Methods</h2>
+					<h2>constructor()</h2>
 					<ul>
-						<li>constructor()</li>
 						<li>Not <em>technically</em> required</li>
 						<li>But OOP best practice</li>
 						<li>Same as init() in a CFC</li>
@@ -192,16 +191,15 @@
 				</section>
 
 				<section>
-					<h2>Lifecycle Methods</h2>
+					<h2>connectedCallback()</h2>
 					<ul>
-						<li>connectedCallback()</li>
 						<li>Required for your Component to start doing things</li>
 						<li>Runs when component is attached to the DOM</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>Lifecycle Methods</h2>
+					<h2>observedAttributes() and attributeChangedCallback()</h2>
 					<ul>
 						<li>observedAttributes()
 							<ul>
@@ -210,36 +208,28 @@
 						</li>
 						<li>attributeChangedCallback()
 							<ul>
-								<li>So we know which ones should/shouldn't trigger code to run in the component</li>
-								<li>Optional (unless you have attributes)</li>
+								<li>So we know which ones should / shouldn't trigger code to run in the component</li>
 							</ul>
 						</li>
+						<li>Optional (unless you have attributes)</li>						
 					</ul>
 				</section>
 				
 				<section>
-					<h2>Lifecycle Methods</h2>
+					<h2>disconnectedCallback()</h2>
 					<ul>
-						<li>disconnectedCallback()
-							<ul>
-								<li>Runs when component is disconnected from the DOM</li>
-								<li>Optional</li>								
-							</ul>
-						</li>
+						<li>Runs when component is disconnected from the DOM</li>
+						<li>Optional</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>Lifecycle Methods</h2>
+					<h2>adoptedCallback()</h2>
 					<ul>
-						<li>adoptedCallback()
-							<ul>
-								<li>Called when a Web Component is moved from one document to another</li>
-								<li>I have no idea when this would be useful</li>
-								<li>IFrames?</li>
-								<li>Coffee if you can tell me a legit use case for it</li>
-							</ul>
-						</li>
+						<li>Called when a Web Component is moved from one document to another</li>
+						<li>I have no idea when this would be useful</li>
+						<li>IFrames?</li>
+						<li>Coffee if you can tell me a legit use case for it</li>
 					</ul>
 				</section>
 
@@ -357,7 +347,7 @@
 						<li>JavaScript doesn't care what's on the other side of a URL</li>
 						<li>CFML, PHP, COBOL, Perl, whatever</li>
 						<li>If the server spits out JSON, your JavaScript can read it</li>
-						<li>Can even mix and match (run CFML <em>and</em> COBOL)</li>
+						<li>Can even mix and match (run CFML <em>and</em> COBOL!)</li>
 						<li>All the browser cares about is the JSON output</li>
 					</ul>
 				</section>
@@ -392,8 +382,8 @@
 				<section>
 					<h2>Migration Uses</h2>
 					<ul>
-						<li>Can use Web Components instead of full blown SPA frameworks</li>
-						<li>Or as a migration plan, porting legacy apps to SPAs</li>
+						<li>Web Components instead of full blown SPA frameworks</li>
+						<li>Porting legacy apps to SPAs</li>
 						<li>Move your business logic to Components</li>
 						<li>They're compatible with all the frameworks</li>
 						<li>And <em>also</em> work in .CFM files</li>
@@ -405,10 +395,12 @@
 					<ul>
 						<li>Very little syntax to Web Components</li>
 						<li>A handful of lifecycle methods</li>
-						<li>A little machinery/boilerplate</li>
-						<li>Everything else is up to how fancy you want to get with JavaScript</li>
-						<li>Can integrate any other JS libs you want to use</li>
-						<li>(Depends how well that lib is written, YMMV)</li>
+						<li>A little machinery / boilerplate</li>
+						<li>Everything else is up to how fancy you want to get</li>
+						<li>Can integrate any other libs
+							<br>
+							(Depends how well that lib is written, YMMV)
+						</li>
 					</ul>
 				</section>
 
@@ -416,12 +408,10 @@
 					<h2>Tips</h2>
 					<ul>
 						<li>Attributes are <em>lowercase</em> or they break!</li>
-						<li>Attributes for input</li>
-						<li>CustomEvent() for output</li>
+						<li>Attributes for input, CustomEvent() for output</li>
 
-						<li>Pick a prefix for your naming convention (the hyphen is req'd, use it to your advantage)</li>
-						<li>Form elements can be tricky. Use FormData Interface or ElementInternals or a Shim (YMMV)</li>
-						<li>Plan and organize first</li>
+						<li>Pick a prefix for your naming convention<br>(the hyphen is req'd, use to your advantage)</li>
+						<li>Form elements are trickier. Use FormData Interface or ElementInternals or a Shim (YMMV)</li>
 
 						<li>Don't use for SEO-sensitive things</li>
 					</ul>
@@ -433,7 +423,7 @@
 						<li>Keep the .js files organized</li>
 						<li>Maybe 1 file / each component, or 1 for "related items"</li>
 						<li>Yes, might mean a lot of files</li>
-						<li>Can use a bundler like Webpack to squish them into 1 smaller .js file
+						<li>Can use a bundler like Webpack to squish them into 1 .js file
 							<br>better performance, faster loading</li>
 						<li>Always load .js files at the bottom of your html page, not in &lt;head&gt;</li>
 					</ul>
