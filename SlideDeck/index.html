@@ -417,12 +417,23 @@
 						<li>Pick a prefix for your naming convention (the hyphen is req'd, use it to your advantage)</li>
 						<li>Form elements can be tricky. Use FormData Interface or ElementInternals or a Shim (YMMV)</li>
 						<li>Plan and organize first</li>
-						<li>Keep the .js files organized; use a bundler if need be</li>
 
 						<li>Don't use for SEO-sensitive things</li>
 					</ul>
 				</section>
 
+				<section>
+					<h2>More Tips</h2>
+					<ul>
+						<li>Keep the .js files organized</li>
+						<li>Maybe 1 file / each component, or 1 for "related items"</li>
+						<li>Yes, might mean a lot of files</li>
+						<li>Can use a bundler like Webpack to squish them into 1 smaller .js file
+							<br>better performance, faster loading</li>
+						<li>Always load .js files at the bottom of your html page, not in &lt;head&gt;</li>
+					</ul>
+				</section>
+				
 				<section>
 					<h2>Other Resources</h2>
 					<ul>
@@ -491,7 +502,7 @@
 
 * Best way to do form elements with vanilla web Components? -->
 
-*Forms - FormData examples
+<!-- *Forms - FormData examples
 
 Tip - 
 use multiple JS files
@@ -517,7 +528,4 @@ async connectedCallback()
   ...if i add this tag mulitple times, it will make multiple HTTP requests for the SAME data.
   I can probably save that into a class variable and just re-use it, cutting down the HTTP requests
 
-
-
-  Delete button with "are you sure?" automatically baked in before the button does something.
-
+ -->

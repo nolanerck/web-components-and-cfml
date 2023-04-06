@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <p>Thanks for confirming. We are starting over from the beginning...</p>
+    <p>Thanks for confirming. We have deleted that file.</p>
 
 </body>
 </html>
