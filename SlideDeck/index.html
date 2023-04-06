@@ -107,7 +107,7 @@
 						<li>JavaScript based building block</li>
 						<li>Kind of like CFML Custom Tags</li>
 						<li>Processed in the browser, not server side</li>
-						<li>No libraries required = they're fast!</li>
+						<li>No libraries required...they're fast!</li>
 					</ul>
 				</section>
 
@@ -115,7 +115,7 @@
 					<h2>Web Components</h2>
 					<ul>
 						<li>Not framework specific</li>
-						<li>Built on vanilla JavaScript</li>
+						<li>Vanilla JavaScript</li>
 						<li>Can also use them w/ <em>all</em> the SPA frameworks</li>
 						<li>...or with <em>none</em> of the SPA frameworks!</li>
 						<li>And they work in CFML too!</li>
@@ -126,8 +126,7 @@
 					<h2>Web Components</h2>
 					<ul>
 						<li>Require knowing a little OOP</li>
-						<li>Based on JavaScript classes</li>
-						<li>Vanilla JavaScript</li>
+						<li>Basic knowledge of how the DOM works</li>
 						<li>Doesn't require Node, TypeScript, 3rd party libaries, etc.</li>
 						<li>Can connect to <em>any</em> server (CFML, Java, PHP, Perl, whatever sends JSON)</li>
 					</ul>
@@ -305,6 +304,24 @@
 					</ul>
 				</section>
 
+				<section>
+					<h2>A Real World Web Component</h2>
+					<ul>
+						<li>&lt;confirm-button&gt;</li>
+						<li>For "did you mean to click that?" situations</li>
+						<li>[6 Confirm Button Demo]</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Another Real World Example</h2>
+					<ul>
+						<li>&lt;slide-show&gt;</li>
+						<li>Stop downloading tons of JS plugins just for this!</li>
+						<li>[7 Slideshow Demo]</li>
+					</ul>
+				</section>
+
 				<!--- Form elememts / FormData -->
 
 				<section>
@@ -317,7 +334,7 @@
 						<li>Can mix and match</li>
 						<li>Ala jQuery or Custom Tags</li>
 						<li>Neither required rewriting your entire CFML codebase</li>
-						<li>Drop them in as needed</li>
+						<li>Use them as needed</li>
 						<li>Self contained modules</li>
 					</ul>
 				</section>
@@ -325,7 +342,7 @@
 				<section>
 					<h2>Web Components + CFML</h2>
 					<ul>
-						<li>[6 CFML Vars Demo]</li>
+						<li>[8 CFML Vars Demo]</li>
 					</ul>
 				</section>
 
@@ -356,14 +373,14 @@
 				<section>
 					<h2>Getting JSON back from CFML</h2>
 					<ul>
-						<li>[7 CFML + JSON Demo]</li>
+						<li>[9 CFML + JSON Demo]</li>
 					</ul>
 				</section>
 
 				<section>
 					<h2>Getting JSON back from CFML</h2>
 					<ul>
-						<li>[8 CFML + JSON Demo via cfhttp]</li>
+						<li>[10 CFML + JSON Demo via cfhttp]</li>
 					</ul>
 				</section>
 
@@ -391,29 +408,39 @@
 				</section>
 
 				<section>
-					<h2>Some Useful Tips</h2>
+					<h2>Tips</h2>
 					<ul>
 						<li>Attributes are <em>lowercase</em> or they break!</li>
-						<li>Stick to a standard prefix for your naming convention (the hyphen is req'd so use it to your advantage)</li>
-						<li>Plan and organize first</li>
-						<li>Form elements can be tricky. Use FormData Interface or ElementInternals or a Shim (YMMV)</li>
 						<li>Attributes for input</li>
 						<li>CustomEvent() for output</li>
+
+						<li>Pick a prefix for your naming convention (the hyphen is req'd, use it to your advantage)</li>
+						<li>Form elements can be tricky. Use FormData Interface or ElementInternals or a Shim (YMMV)</li>
+						<li>Plan and organize first</li>
 						<li>Keep the .js files organized; use a bundler if need be</li>
+
+						<li>Don't use for SEO-sensitive things</li>
 					</ul>
 				</section>
 
 				<section>
 					<h2>Other Resources</h2>
 					<ul>
+						<li>Raymond Camden's Blog</li>
 						<li>Web Components in Space on YouTube (Ben Farrell)</li>
+						<li>UnicornUtterances.com (Corbin Crutchley)</li>
 						<li>custom-elements-everywhere.com</li>
 						<li>webcomponents.org</li>
-						<li>Tons of libaries on GitHub</li>
-						<li>Raymond Camden's Blog</li>
-						<li>UnicornUtterances.com (Corbin Crutchley)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Libraries To Explore</h2>
+
+					<ul>
 						<li>Lit Framework (lit.dev)</li>
-						<li>Stencil (Stenciljs.com)</li>						
+						<li>Stencil (Stenciljs.com)</li>
+						<li>Tons of goodies on GitHub</li>						
 					</ul>
 				</section>
 

@@ -17,8 +17,8 @@
     <cfoutput>
         <cfloop array="#rockstars#" index="curItem">
             <guitar-player name="#curItem.name#" 
-                           band="#curItem.band#"
-                           photo="#curitem.photo#">
+                        band="#curItem.band#"
+                        photo="#curitem.photo#">
             </guitar-player>
         </cfloop>
     </cfoutput>

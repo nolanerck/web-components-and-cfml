@@ -9,7 +9,7 @@ class HelloWorld extends HTMLElement
   // "official" list of the attributes our component cares about
   static get observedAttributes() 
   {
-    return ['firstname','lastname'];
+    return [ 'firstname', 'lastname' ];
   }
   
   // when an observed attribute is set or changes
