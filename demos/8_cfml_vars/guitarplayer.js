@@ -51,6 +51,11 @@ class GuitarPlayer extends HTMLElement
           color: green;
         }
 
+        .photo img
+        {
+          object-fit: contain;
+        }
+
         .photo img:hover
         {
           border: 4px dashed red;

@@ -1,6 +1,5 @@
 {
     "app":{
-        "cfengine":"Adobe@2021.0.5"
-    },
-    "openbrowser":"false"
+        "cfengine":"Lucee@5.4.0+80"
+    }
 }
