@@ -32,7 +32,7 @@ class HelloWorld extends HTMLElement
             color: green;
         }
       </style>
-      <div>Hello, <slot></slot>, and welcome to CF Camp!</div>
+      <div>Hello, <slot></slot>, and welcome to CF Summit!</div>
     `;
   }
   

@@ -11,7 +11,7 @@ class GuitarPlayer extends HTMLElement
   // "official" list of the attributes our component cares about
   static get observedAttributes() 
   {
-    return ['name','band', 'photo'];
+    return ['name', 'band', 'photo'];
   }
   
   // when an observed attribute is set or changes

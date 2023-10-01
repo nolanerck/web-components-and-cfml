@@ -1,5 +1,12 @@
 {
+    "web":{
+        "webroot":".",
+        "http":{
+            "port":"8888"
+        }
+    },
+    "openbrowser":"false",
     "app":{
-        "cfengine":"Lucee@5.4.0+80"
+        "cfengine":"Adobe@2023.0.4+330500"
     }
 }
