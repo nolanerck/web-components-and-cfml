@@ -21,7 +21,7 @@ class HelloWorld extends HTMLElement
   
   connectedCallback() 
   {
-    this.textContent = `<div>Hello, ${ this.firstname } ${ this.lastname }, and welcome to CF Camp!</div>`;
+    this.textContent = `<div>Hello, ${ this.firstname } ${ this.lastname }, and welcome to CF Summit!</div>`;
   }
   
 }
