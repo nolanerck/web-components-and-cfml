@@ -62,13 +62,13 @@
 					<ul>
 						<li>Owner / Director, South of Shasta</li>
 						<li>Manager, Sac Interactive Tech Meetup</li>
-						<li>CTO at FSK Audio</li>
 						<li>Reformed Video Game Developer - Grim Fandango, SimPark, StarWars Rogue Squadron, etc...</li>
+						<li>CTO at FSK Audio</li>
 						<li>Music Junkie</li>
 					</ul>
 				</section>
 
-				<section data-background-image="./images/record-collection.jpg">
+				<section data-background-image="./images/record-collection.jpg" data-background-size="contain">
 				</section>
 
 				<section data-background-image="./images/charlie_brown.png" data-background-size="contain">
@@ -156,6 +156,18 @@
 						<li>The hyphen is <em>required</em></li>
 						<li>Prevents naming collision issues with future HTML tags</li>
 						<li>Pick a project or module prefix for your code</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>A note about "extends HTMLElement"</h2>
+
+					<ul>
+						<li>HTMLElement is the default for inheritance</li>
+						<li>The spec says you can inherit from any HTML Tag<br>(Table, Div, etc)</li>
+						<li>Works fine in other browsers, not Safari</li>
+						<li>Safari only supports "extends HTMLElement"</li>
+						<li>Various Shims available if needed (unlikely)</li>
 					</ul>
 				</section>
 
@@ -263,7 +275,8 @@
 					<ul>
 						<li>Can't add HTML tags via this.textContent, just plain text</li>
 						<li>Need better functionality for this to be really usable</li>
-						<li>Want to put our CSS inside the Component so everything is organized, and
+						<li>this.innerHTML</li>
+						<li>Also, want to put our CSS inside the Component so everything is organized, and
 							safe from outside interference via other code.
 						</li>
 						<li>Enter ShadowDOM</li>
@@ -447,6 +460,8 @@
 					<ul>
 						<li>Lit Framework (lit.dev)</li>
 						<li>Stencil (Stenciljs.com)</li>
+						<li>Shoelace (shoelace.style)</li>
+						<li>Lit and Stencil need to be compiled<br>Shoelace does not</li>
 						<li>Tons of goodies on GitHub</li>						
 					</ul>
 				</section>
@@ -540,13 +555,4 @@ Example of launching a modal (via Bootstrap?)
 
 Add this.innerHTML example
 compare it to ShadowDOM
-
-Add ShoeBox to "Web Component Libraries" slide
-
-Safari has a bug
-does not let you do anything other than "extends HTMLElement"
-cannot extend, say, Table
-...you can do that in other browers, but not Safari
-
-
 

@@ -2,7 +2,7 @@ class HelloWorld extends HTMLElement
 {
     connectedCallback() 
     {
-      this.textContent = 'Hello and welcome to CF Summit 2023!';
+      this.textContent = 'Hello and welcome to ColdFusion Online Summit 2024!';
     }
   
 }

@@ -12,7 +12,7 @@ class SlideShow extends HTMLElement
     {
         super();
 
-        const _shadow    = this.attachShadow( { mode:'open' } );
+        const _shadow   = this.attachShadow( { mode:'open' } );
         this.totalImgs  = this.querySelectorAll('img').length;
         this.current = 0;
 

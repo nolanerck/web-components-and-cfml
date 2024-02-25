@@ -9,8 +9,8 @@ class GuitarPlayers extends HTMLElement
 
   async findRockStarsAPI()
   {
-    // let res = await fetch( "/api/legacy.cfm" );
-    let res = await fetch( "/api/Musicians.cfc?method=getGuitarists&returnformat=json&genre=metal" );
+    let res = await fetch( "/api/legacy.cfm" );
+    // let res = await fetch( "/api/Musicians.cfc?method=getGuitarists&returnformat=json" );
     // your framework-1 URL goes here
     // or your ColdBox REST API
     // or your whatever other URL that returns JSON
@@ -23,7 +23,7 @@ class GuitarPlayers extends HTMLElement
   // "official" list of the attributes our component cares about
   static get observedAttributes() 
   {
-    return ['name','band'];
+    return [];
   }
   
   // when an observed attribute is set or changes
