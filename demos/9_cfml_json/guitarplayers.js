@@ -15,6 +15,9 @@ class GuitarPlayers extends HTMLElement
     // or your ColdBox REST API
     // or your whatever other URL that returns JSON
 
+    // PHP!
+    // let res = await fetch( "http://localhost:9001/api/legacy.php" );
+
     let rockstars = await res.json();
 
     return rockstars;
